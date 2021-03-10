@@ -1,0 +1,136 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body{
+    background: linear-gradient(-45deg,#b993d6 ,#ddd6f3  ,#8ca6db);
+    background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+.with-arrow .nav-link.active {
+  position: relative;
+}
+.with-arrow .nav-link.active::after {
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #2b90d9;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+/*Back button*/
+.bk-btn {
+    height: 52px;
+    width: 52px;
+    background-color: #ddd6f3;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+  .bk-btn .bk-btn-triangle {
+    position: relative;
+    top: 13px;
+    left: 10.4px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right: 13px solid white;
+    
+  }
+  .bk-btn .bk-btn-bar {
+    position: relative;
+    background-color: white;
+    height: 7.8px;
+    width: 13px;
+    top: -3.64px;
+    left: 22.88px;
+  }
+  
+  .bk-btn:hover {
+    background-color: white;
+  }
+  
+  .bk-btn:hover > .bk-btn-bar {
+    background-color: #ddd6f3;
+  }
+  .bk-btn:hover > .bk-btn-triangle {
+    border-right: 13px solid #ddd6f3;
+  }
+ 
+  
+
+
+
+.btn {
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+	background-color: transparent;
+	border-radius: 1em;
+	color: #e74c3c;
+	cursor: pointer;
+	align-self: center;
+	font-size: 0.8rem;
+	font-weight: 400;
+	line-height: 1;
+	margin: 20px;
+	padding: 1.2em 2.8em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+  }
+  .btn:hover, .btn:focus {
+	color: #fff;
+	outline: 0;
+  }
+  
+  .first {
+	  background-color: blue;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+
+  .fourth {
+	font-size: 13px;
+	border-color: green;
+	color: green;
+	background-image: linear-gradient(45deg, green 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 300ms ease-in-out;
+  }
+  .fourth:hover {
+	background-position: 0;
+  }
+
+  
+.fifth {
+	font-size: 13px;
+	border-color: #8e44ad;
+	color: #8e44ad;
+	background-image: linear-gradient(45deg, #8e44ad 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 300ms ease-in-out;
+  }
+
+  .fifth:hover {
+	background-position: 0;
+  }
+

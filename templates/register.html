@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+    <div class="container"><div class="container py-5">
+      <div style="margin: 20px;" class="bk-btn" onclick="history.back()">
+        <div class="bk-btn-triangle"></div>
+        <div class="bk-btn-bar"></div>
+      </div>
+<div style="text-align: center;" class="p-5 bg-white rounded shadow mb-5">
+    <!-- Bordered tabs-->
+    <ul id="myTab1" role="tablist" class="nav nav-tabs nav-pills with-arrow flex-column flex-sm-row text-center">
+      <li class="nav-item flex-sm-fill">
+        <a id="home1-tab" data-toggle="tab" href="#home1" role="tab" aria-controls="home1" aria-selected="true" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 border active">STEP 1</a>
+      </li>
+      <li class="nav-item flex-sm-fill">
+        <a id="profile1-tab" data-toggle="tab" href="#profile1" role="tab" aria-controls="profile1" aria-selected="false" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 border">STEP 2</a>
+      </li>
+      <li class="nav-item flex-sm-fill">
+        <a id="contact1-tab" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact1" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0 border">STEP 3</a>
+      </li>
+    </ul>
+    <div id="myTab1Content" class="tab-content">
+      <div   id="home1" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
+        {% for s in s1 %}
+        <p class="leade font-italic" style="margin-bottom: -2%;">{{s.description}}</p><br>
+        {% endfor %}
+           {% for r in r1 %}
+          <a href="https://www.{{r.link}}"><button class="btn fourth">{{r.name}}</button></a>
+          {% endfor %}
+          {% for r in r2 %}
+          <a href="https://www.{{r.link}}"><button class="btn fourth">{{r.name}}</button></a>
+          {% endfor %}
+      </div>
+      <div id="profile1" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+        {% for s in s2 %}
+        <p class="leade font-italic" style="margin-bottom: -2%;">{{s.description}}</p><br>
+        {% endfor %}
+          {% for r in r3 %}
+          <a href="https://www.{{r.link}}"><button class="btn fourth">{{r.name}}</button></a>
+          {% endfor %}
+          {% for r in r4 %}
+          <a href="https://www.{{r.link}}"><button class="btn fourth">{{r.name}}</button></a>
+          {% endfor %}
+
+        </div>
+      <div id="contact1" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade px-4 py-5">
+        {% for s in s3 %}
+        <p class="leade font-italic" style="margin-bottom: -2%;">{{s.description}}</p><br>
+        {% endfor %}
+          {% for r in r5 %}
+          <a href="https://www.{{r.link}}"><button class="btn fourth">{{r.name}}</button></a>
+          {% endfor %}
+      </div>
+      <b>Please complete all of three steps...</b>
+    </div>
+    <!-- End bordered tabs -->
+  </div>
+</div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+ 
+</script>
+</html>
